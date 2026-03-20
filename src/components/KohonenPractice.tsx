@@ -229,11 +229,11 @@ const KohonenPractice: React.FC<KohonenPracticeProps> = ({
           {challenge.type === 'multiple-choice' && (
             <div className="space-y-2">
               <label className="block text-sm font-semibold text-gray-700">Select your answer:</label>
-              <div className="grid grid-cols-1 gap-2">
+              <div className="grid grid-cols-2 md:grid-cols-1 gap-2">
                 {challenge.choices?.map((choice, idx) => (
                   <button key={idx} onClick={() => setUserAnswer(String(idx))}
                     disabled={completed.has(currentIdx)}
-                    className={`p-3 rounded-lg font-semibold text-left transition-all ${userAnswer === String(idx) ? 'bg-teal-600 text-white border-2 border-teal-700' : 'bg-gray-100 text-gray-800 border-2 border-gray-300 hover:border-teal-300'} disabled:cursor-not-allowed`}>
+                    className={`p-3 rounded-lg font-semibold text-center transition-all ${userAnswer === String(idx) ? 'bg-teal-600 text-white border-2 border-teal-700 shadow-md' : 'bg-gray-100 text-gray-800 border-2 border-gray-300 hover:border-teal-300 hover:bg-gray-50'} disabled:cursor-not-allowed disabled:opacity-50`}>
                     {choice}
                   </button>
                 ))}
