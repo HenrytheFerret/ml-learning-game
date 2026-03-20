@@ -276,7 +276,7 @@ const ImprovedDashboard: React.FC<ImprovedDashboardProps> = ({
         </div>
         <div className="bg-white rounded-lg shadow p-4 text-center">
           <p className="text-gray-600 text-sm">Current Streak</p>
-          <p className="text-3xl font-bold text-orange-500">🔥 {progress.streak}</p>
+          <p className="text-3xl font-bold text-orange-500">🔥 {progress.streaks.current}</p>
         </div>
         <div className="bg-white rounded-lg shadow p-4 text-center">
           <p className="text-gray-600 text-sm">Overall Accuracy</p>

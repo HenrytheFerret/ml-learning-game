@@ -131,13 +131,13 @@ const EnhancedDashboard: React.FC<DashboardProps> = ({ onTopicSelect }) => {
           <div className="bg-gradient-to-br from-orange-600 to-red-600 text-white rounded-lg shadow-lg p-6">
             <p className="text-sm text-orange-200 mb-1">Current Streak</p>
             <div className="flex items-baseline gap-2">
-              <h2 className="text-4xl font-black">{progress.currentStreak}</h2>
+              <h2 className="text-4xl font-black">{progress.streaks.current}</h2>
               <span className="text-2xl animate-pulse">🔥</span>
             </div>
             <p className="text-orange-100 text-sm mt-2">days in a row</p>
             <div className="mt-4 pt-4 border-t border-orange-500">
               <p className="text-xs text-orange-200">
-                Best: {progress.longestStreak} days 🏆
+                Best: {progress.streaks.longest} days 🏆
               </p>
             </div>
           </div>
@@ -229,7 +229,7 @@ const EnhancedDashboard: React.FC<DashboardProps> = ({ onTopicSelect }) => {
             { label: 'Challenges Completed', value: Math.round(progress.totalXP / 25), icon: '✅' },
             { label: 'Correct Answers', value: `${Math.round((progress.topicScores['perceptron']?.accuracy || 0) * 100)}%`, icon: '🎯' },
             { label: 'Topics Unlocked', value: Math.min(1 + Math.floor(progress.totalXP / 500), 4), icon: '🔓' },
-            { label: 'Study Streak', value: progress.currentStreak, icon: '🔥' },
+            { label: 'Study Streak', value: progress.streaks.current, icon: '🔥' },
           ].map((stat, i) => (
             <div key={i} className="bg-slate-800 border border-slate-700 rounded-lg p-4 text-center">
               <p className="text-2xl mb-2">{stat.icon}</p>

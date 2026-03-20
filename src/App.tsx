@@ -233,7 +233,7 @@ const App: React.FC = () => {
                       <div className="bg-slate-800 border border-slate-700 rounded-lg p-4 text-center text-white">
                         <p className="text-2xl mb-1">🔥</p>
                         <p className="text-gray-300 text-sm">Current Streak</p>
-                        <p className="text-2xl font-bold">{progress.currentStreak}</p>
+                        <p className="text-2xl font-bold">{progress.streaks.current}</p>
                       </div>
                       <div className="bg-slate-800 border border-slate-700 rounded-lg p-4 text-center text-white">
                         <p className="text-2xl mb-1">⭐</p>
