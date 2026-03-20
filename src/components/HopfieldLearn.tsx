@@ -30,6 +30,7 @@ const HopfieldLearn: React.FC<HopfieldLearnProps> = ({ onComplete, lessonId }) =
   const [state, setState] = useState<number[]>([1, 1, 1, 0]); // noisy start
   const [history, setHistory] = useState<number[][]>([[1, 1, 1, 0]]);
   const [converged, setConverged] = useState(false);
+  const [step, setStep] = useState(0);
 
   const stepNetwork = () => {
     if (converged) return;
@@ -62,8 +63,6 @@ const HopfieldLearn: React.FC<HopfieldLearnProps> = ({ onComplete, lessonId }) =
 
   if (!lesson) return <div className="text-center text-red-600 py-8">❌ Lesson not found: {lessonId}</div>;
   const { learnContent } = lesson;
-
-  const [step, setStep] = useState(0);
 
   const steps = [
     {
