@@ -39,7 +39,7 @@ Euclidean distance = √((0.8-0.6)² + (0.6-0.4)²)
                    = √0.08
                    ≈ ?  (round to 3 decimal places)`,
     expectedAnswer: 0.283,
-    tolerance: 0.005,
+    tolerance: 0.01,
     baseXP: 25,
   },
   {
